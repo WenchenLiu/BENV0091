@@ -30,6 +30,7 @@ dmy_hm(f)
 
 ```{r}
 now() + seconds(123456789)
+now() + months(12)
 ```
 
 ### Create a date-time variable for 1st April 1980 5am with the UTC time zone, then convert
@@ -37,8 +38,9 @@ now() + seconds(123456789)
 ```{r}
 f <- '1st April 1980 5am'
 d <- dmy_h(f)
-
+d
 print(with_tz(d, tz = 'Europe/London'))
 print(with_tz(d, tz = 'Asia/Tokyo'))
 print(with_tz(d, tz = 'America/Los_Angeles'))
+print(with_tz(d, tz = 'Asia/Shanghai'))
 ```
